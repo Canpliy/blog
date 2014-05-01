@@ -8,6 +8,29 @@
 </head>
 <body>
 
+  <header class="shadow">
+    <div id="person-info">
+      <%= image_tag 'avatar.jpg', class: 'avatar'%>
+      <ul class="person-links">
+        <li><a target="_blank" href="http://jianshu.io/users/2n2RXH/">简书</a></li>
+        <li><a target="_blank" href="http://weibo.com/zeroxiobai" class="weibo">微博</a></li>
+      </ul>
+      <div class="person-text-info">
+        <h2>零小白</h2>
+        <p>喜欢 web 开发的本科生一枚，喜爱简洁的设计、javascript 、Ruby on Rails 和 linux。</p>
+      </div>
+    </div>
+    <ul id="nav">
+      <li><a href="#">首页</a></li>
+      <li><a href="#">说说</a></li>
+      <li><a href="#">日志</a></li>
+      <li><a href="#">影评</a></li>
+      <li><a href="#">音乐</a></li>
+      <li><a href="#">留言</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
+  </header>
+
 <%= yield %>
 
 </body>
