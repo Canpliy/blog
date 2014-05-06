@@ -1,0 +1,14 @@
+<% provide(:show_picture_name, 'article_show_picture') %>
+
+<% @articles.each do |article| %>
+  <div class="list-item article-item shadow">
+    <h2><%= article.title %></h2>
+    <div class="article-content">
+      <%= raw(article.content) %>
+    </div>
+    <p class="article-info">
+      <em class="time"><%= format_time(article.created_at) %></em>
+      <em class="comment">123</em>
+    </p>
+  </div>
+<% end %>

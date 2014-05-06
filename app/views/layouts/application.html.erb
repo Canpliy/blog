@@ -9,6 +9,17 @@
 <body>
 
   <header class="shadow">
+    <%= image_tag "#{yield(:show_picture_name)}.jpg",
+                  class: "#{yield(:show_picture_name)}" %>
+    <ul id="nav">
+      <li><%= link_to '首页', root_path %></li>
+      <li><a href="#">说说</a></li>
+      <li><%= link_to '日志', articles_path %></li>
+      <li><a href="#">影评</a></li>
+      <li><a href="#">音乐</a></li>
+      <li><a href="#">留言</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
     <div id="person-info">
       <%= image_tag 'avatar.jpg', class: 'avatar'%>
       <ul class="person-links">
@@ -20,15 +31,6 @@
         <p>喜欢 web 开发的本科生一枚，喜爱简洁的设计、javascript 、Ruby on Rails 和 linux。</p>
       </div>
     </div>
-    <ul id="nav">
-      <li><a href="#">首页</a></li>
-      <li><a href="#">说说</a></li>
-      <li><a href="#">日志</a></li>
-      <li><a href="#">影评</a></li>
-      <li><a href="#">音乐</a></li>
-      <li><a href="#">留言</a></li>
-      <li><a href="#">关于</a></li>
-    </ul>
   </header>
 
 <%= yield %>

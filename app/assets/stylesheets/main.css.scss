@@ -3,6 +3,10 @@ html, body{
   padding: 0; 
 }
 
+div{
+  overflow: hidden;
+}
+
 ul, p, h1, h2, h3, h4, h5, h6{
   margin: 0;
   padding: 0;
@@ -18,7 +22,8 @@ $blue-font-color: #218cdc;
 
 .main-box{
   width: $content-with;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .shadow{
@@ -35,14 +40,24 @@ body{
 
 header{
   @extend .main-box;
-  height: 30px;
-  padding-top: 410px;
   position: relative;
-  background: white url(head_bg.jpg) no-repeat;
+  overflow: hidden;
+  background: white;
+
+  &>img{
+    display: block;
+    height: 120px;
+  }
+
+  .home_show_picture{
+    height: 410px;
+  }
+
 }
 
 #person-info{
   position: absolute;
+  overflow: visible;
   width: 100%;
   height: 50px;
   background: rgba(255, 255, 255, 0.7);
@@ -119,5 +134,51 @@ header{
       background-color: $blue-font-color;
       color: white;
     }
+  }
+}
+
+.list-item{
+  width: $content-with;
+  margin: 20px auto 0 auto;
+  background: white;
+}
+
+.article-item{
+
+  h2, .article-content, .article-info{
+    padding: 0 10px;
+  }
+
+  .article-content{
+    margin-bottom: 10px;
+  }
+
+  h2{
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  p{
+    line-height: 24px;
+  }
+}
+
+.article-info{
+  border-top: 2px solid #e3e3e3;
+
+  em{
+    display: block;
+    font-style: normal;
+    line-height: 30px;
+    font-size: 12px;
+  }
+
+  .time{
+    float: left;
+  }
+
+  .comment{
+    float: right;
   }
 }
