@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140501070914) do
+ActiveRecord::Schema.define(version: 20140520115242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,5 +22,40 @@ ActiveRecord::Schema.define(version: 20140501070914) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "comments", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "content"
+    t.integer  "review_id"
+    t.string   "review_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["review_id", "review_type"], name: "index_comments_on_review_id_and_review_type", using: :btree
+
+  create_table "tags", force: true do |t|
+    t.string   "name"
+    t.integer  "label_id"
+    t.string   "label_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tags", ["label_id", "label_type"], name: "index_tags_on_label_id_and_label_type", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "signature"
+    t.string   "password_digest"
+    t.string   "img_url"
+    t.boolean  "admin",           default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

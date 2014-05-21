@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <%= render partial: 'shared/head_content' %>
+<body class="main-container">
+
+  <header class="shadow">
+    <%= image_tag "#{show_picture_name}.jpg",
+                  class: "#{show_picture_name}" %>
+    <ul id="nav">
+      <li><%= link_to '首页', root_path %></li>
+      <li><a href="#">说说</a></li>
+      <li><%= link_to '日志', articles_path %></li>
+      <li><a href="#">影评</a></li>
+      <li><a href="#">音乐</a></li>
+      <li><a href="#">留言</a></li>
+      <li><a href="#">关于</a></li>
+    </ul>
+    <div id="person-info">
+      <% blogger = find_blogger %>
+      <%= image_tag blogger.img_url, class: 'avatar'%>
+      <ul class="person-links">
+        <li><a target="_blank" href="http://jianshu.io/users/2n2RXH/">简书</a></li>
+        <li><a target="_blank" href="http://weibo.com/zeroxiobai" class="weibo">微博</a></li>
+      </ul>
+      <div class="person-text-info">
+        <h2><%= blogger.name %></h2>
+        <p><%= blogger.signature %></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-box">
+    <%= yield %>
+  </div>
+
+  <!-- <%= debug params %> -->
+
+</body>
+</html>

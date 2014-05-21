@@ -1,0 +1,21 @@
+<%= form_for(@article, html: { class: 'edit-form' }) do |f| %>
+  <div>
+    <%= f.label :title, '标题' %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :tags, '标签' %>
+    <%= f.text_field :tags, value: @article.tags_to_s %>
+  </div>
+  <div>
+    <%= f.label :content, '内容' %>
+    <%= f.text_area :content, id: "article-content" %>
+    <script type="text/javascript">
+      $("#article-content").qeditor({});
+    </script>
+  </div>
+  <div>
+    <%= f.submit '确定', class: 'btn btn-success' %>
+    <%= link_to '返回', articles_path, class: 'btn' %>
+  </div>
+<% end %>

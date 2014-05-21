@@ -1,0 +1,106 @@
+.window-view{
+  height: 100%;
+  background: url(signin_bg.jpg) no-repeat center center;
+}
+
+.sign-content{
+  background: none;
+}
+
+#signin-container{
+  width: 220px;
+  margin: 230px auto 0 auto;
+  padding: 77px 90px 30px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  background: #fefefe;
+  overflow: visible;
+
+  .avatar{
+    display: block;
+    position: absolute;
+    height: 98px;
+    width: 98px;
+    border-radius: 49px;
+    border: 2px solid #d8d8db;
+    top: -50px;
+    left: 150px;
+  }
+
+  .email, .password{
+    border: 1px solid #e0e0e2;
+    margin-bottom: 20px;
+
+    label{
+      height: 28px;
+      width: 30px;
+      float: left;
+      background: url(signin.png) no-repeat;
+      text-indent: -999px;
+    }
+
+    label[for='session_password']{
+      background-position: -30px 0;
+    }
+  }
+
+  .focus{
+    border-color: #3079ed;
+    transition: border linear .2s, box-shadow linear .2s;
+    -webkit-transition: border linear .2s, box-shadow linear .2s;
+  }
+
+  input[type='text'], input[type='password']{
+    border: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    background: url(signin.png) no-repeat 0 -28px;
+    padding: 6px 0 7px 13px;
+    width: 175px;
+
+
+    &:focus{
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .submit{
+    height: 30px;
+    font-size: 11px;
+    line-height: 30px;
+    color: #666;
+  }
+
+  input[type='checkbox']{
+    height: 14px;
+    width: 14px;
+    margin-top: 10px;
+    float: left;
+  }
+
+  label[for='session_remember']{
+    font-size: inherit;
+    line-height: inherit;
+    display: inline;
+  }
+
+  input[type='submit']{
+    height: 28px;
+    width: 66px;
+    float: right;
+    background-color: #4d90fe; 
+    background-image: -webkit-linear-gradient(top,#4d90fe,#4787ed);
+    background-image: linear-gradient(top,#4d90fe,#4787ed);
+    border: 1px solid #3079ed;
+    color: white;
+    font-weight: bold;
+  }
+
+  .alert{
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
+

@@ -1,0 +1,23 @@
+<% provide(:page_title, "登录") %>
+
+<div id="signin-container" class="shadow">
+  <%= image_tag find_blogger.img_url, class: "avatar" %>
+  <% flash.each do |key, value| %>
+    <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% end %>
+  <%= form_for(:session, url: sessions_path) do |f| %>
+    <div class="email">
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </div>
+    <div class="password">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </div>
+    <div class="submit">
+      <%= f.check_box :remember %>
+      <%= f.label :remember, "下次自动登录" %>
+      <%= f.submit '登录' %>
+    </div>
+  <% end %>
+</div>

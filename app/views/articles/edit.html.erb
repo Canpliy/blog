@@ -1,0 +1,8 @@
+<%= provide(:page_title, '文章编辑') %>
+
+<div class="edit-content list-item shadow">
+  <h2 class="main-title">文章编辑</h2>
+  <%= render partial: 'form',
+             locals: { article: @article } %>
+</div>
+
