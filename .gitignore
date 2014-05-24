@@ -5,6 +5,8 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+/public/person_image
+
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp

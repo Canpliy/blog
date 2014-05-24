@@ -8,9 +8,19 @@ Rails.application.routes.draw do
 
   resources :comments, only: [:create, :destroy]
 
+  resource :user do
+    member do
+      patch 'update_image'
+      patch 'update_password'
+    end
+  end
+
   get 'static_pages/about'
 
   get 'signin' => 'sessions#new', as: :signin
+  get 'signout' => 'sessions#destroy', as: :signout
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

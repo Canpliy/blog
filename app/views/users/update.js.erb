@@ -1,0 +1,2 @@
+$("header").children('#person-info').remove().end().append("<%= escape_javascript(render 'shared/person_info') %>");
+$(".alert-content").prepend("<%= escape_javascript(render partial: 'shared/alert') %>");

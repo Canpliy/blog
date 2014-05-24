@@ -27,7 +27,7 @@ body{
 
 $background_color: #ededed;
 $content-with: 980px;
-$blue-font-color: #218cdc;
+$blue-font-color: #08c;
 $gray-border-color: #e3e3e3;
 $gray-color: #9b9b9b;
 
@@ -54,6 +54,24 @@ $gray-color: #9b9b9b;
 }
 
 .alert{
+  margin: 20px 0 0;
+  font-size: 12px;
+  // border: none;
+  // background: white;
+}
+
+.avatar{
+  width: 80px;
+  height: 80px;
+  display: block;
+  border: 2px white solid;
+  border-radius: 40px;
+}
+
+.close{
+  float: right;
+  font-weight: bold;
+  color: #000;
   font-size: 12px;
 }
 
@@ -91,11 +109,6 @@ header{
     position: absolute;
     left: 20px;
     bottom: 8px;
-    width: 80px;
-    height: 80px;
-    display: block;
-    border: 2px white solid;
-    border-radius: 40px;
   }
 
   .person-links{
@@ -266,7 +279,9 @@ header{
   padding: 20px 20px 0;
 }
 
-.edit-form{
+// 表单样式
+
+.form{
   vertical-align: middle;
 
   &>div{
@@ -276,6 +291,7 @@ header{
   label{
     float: left;
     margin-right: 15px;
+    line-height: 30px;
   }
 
   input, label{
@@ -286,6 +302,12 @@ header{
     color: black;
   }
 
+  .field_with_errors{
+    display: inline;
+  }
+}
+
+.article-form{
   .qeditor_border{
     margin-left: 43px;
     padding-bottom: 0;
@@ -318,7 +340,6 @@ header{
   }
 
   .field_with_errors{
-    display: inline;
 
     input, .qeditor_preview{
       border: 1px red solid;
@@ -326,6 +347,16 @@ header{
         box-shadow: none;
       }
     }
+  }
+}
+
+.user-form{
+  .signature{
+    width: 400px;
+  }
+
+  .btn{
+    margin-left: 45px;
   }
 }
 
@@ -412,5 +443,82 @@ header{
 
   .submit{
     text-align: right;
+  }
+}
+
+// 个人中心页面资料
+
+.person-nav{
+  padding-left: 30px;
+  width: 100px;
+  float: left;
+
+  .selected{
+    background: $blue-font-color;
+    color: white;
+  }
+
+  a{
+    width: 80px;
+    line-height: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    padding: 0 10px;
+
+    &:hover{
+      @extend .selected;
+    }
+  }
+
+
+}
+
+.person-info-container{
+  margin: 0 0 20px 150px;
+  padding-left: 20px;
+  border-left: 1px solid $gray-border-color;
+  height: 230px;
+
+  .user-image, .password{
+    display: none;
+  }
+}
+
+.basic-info{
+}
+
+input.image-update{
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 82px;
+  opacity: 0;
+}
+
+.user-image{
+
+  form {
+    margin: 24px 0 0 104px;
+    position: relative;
+  }
+
+  .avatar{
+    float: left;
+  }
+
+
+  button{
+  }
+
+}
+
+.password_form{
+  label{
+    width: 45px;
+  }
+
+  .btn{
+    margin-left: 60px;
   }
 }

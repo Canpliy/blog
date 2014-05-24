@@ -1,0 +1,6 @@
+<%= image_tag current_user.img_url, class: 'avatar' %>
+<%= form_tag(update_image_user_path, method: 'patch', multipart: true, id: "edit-image") do %>
+  <%= button_tag '更改头像', class: 'btn btn-success' %>
+  <%= file_field_tag 'image', class: "image-update" %>
+  <%= tag(:input, :type => "hidden", :name => request_forgery_protection_token.to_s, :value => form_authenticity_token) %>
+<% end %>

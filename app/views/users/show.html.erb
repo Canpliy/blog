@@ -1,0 +1,21 @@
+<%= provide(:page_title, '个人中心') %>
+
+<div class="edit-content list-item shadow">
+  <h2 class="main-title">个人中心</h2>
+  <nav class="person-nav">
+    <a href="#" class="selected">基本资料</a>  
+    <a href="#">头像修改</a>  
+    <a href="#">密码修改</a>  
+  </nav>
+  <div class="person-info-container">
+    <div class="basic-info">
+      <%= render 'form' %>
+    </div>
+    <div class="user-image">
+      <%= render 'image_form' %>
+    </div>
+    <div class="password">
+      <%= render 'password_form' %>
+    </div>
+  </div>
+</div>

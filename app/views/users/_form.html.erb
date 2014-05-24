@@ -1,0 +1,17 @@
+<%= form_for(current_user, html: { class: 'form user-form' }, remote: true) do |f| %>
+  <div>
+    <%= f.label :name, '昵称' %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :email, '邮件' %>
+    <%= f.text_field :email, disabled: "disabled" %>
+  </div>
+  <div>
+    <%= f.label :signature, '签名' %>
+    <%= f.text_area :signature, class: 'signature' %>
+  </div>
+  <div>
+    <%= f.submit '确定', class: 'btn btn-success' %>
+  </div>
+<% end %>

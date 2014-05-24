@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  before_action :signed_in_user, expect: [:index, :show]
+
   def index
     @articles = Article.all
   end
@@ -24,6 +26,7 @@ class ArticlesController < ApplicationController
     end
 
     if @article.update_attributes(article_params)
+      flash[:success] = "更新成功！"
       redirect_to articles_path
     else
       render :edit
