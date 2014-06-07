@@ -13,15 +13,19 @@ content = '<p>注：“活着，真是对不起”源于《被遗弃松子的一
 
 Article.create(title: title, content: content)
 
-name = "零小白"
-email = "zeroxiaobai@gmail.com"
-img_url  = 'avatar.jpg'
-password = "0054444944"
-signature = "喜欢 web 开发的本科生一枚，喜爱简洁的设计、javascript 、Ruby on Rails 和 linux。"
+# name = "零小白"
+# email = "zeroxiaobai@gmail.com"
+# img_url  = 'avatar.jpg'
+# password = "0054444944"
+# signature = "喜欢 web 开发的本科生一枚，喜爱简洁的设计、javascript 、Ruby on Rails 和 linux。"
 
-User.create(name: name,
-            email: email,
-            img_url: img_url,
-            password: password,
-            signature: signature, 
-            admin: true)
+# User.create(name: name,
+#             email: email,
+#             img_url: img_url,
+#             password: password,
+#             signature: signature, 
+#             admin: true)
+
+10.times do |i|
+  Micropost.create(content: "别人笑我太疯癫，我笑他人看不穿！")
+end

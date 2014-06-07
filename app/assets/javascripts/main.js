@@ -52,4 +52,9 @@ $(document).on('page:change', function(){
     $(this).parent('form').submit();
   });
 
+
+  $('#mytest').change(function(event) {
+    alert($(this).val());
+
+  });
 });

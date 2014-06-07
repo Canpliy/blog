@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  resources :microposts
+
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :comments, only: [:create, :destroy]
