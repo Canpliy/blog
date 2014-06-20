@@ -8,11 +8,9 @@
                   class: "#{show_picture_name}" %>
     <ul id="nav">
       <li><%= link_to '首页', root_path %></li>
-      <li><%= link_to '说说', microposts_path %></li>
       <li><%= link_to '日志', articles_path %></li>
-      <li><a href="#">影评</a></li>
+      <li><%= link_to '影评', film_reviews_path %></li>
       <li><a href="#">音乐</a></li>
-      <li><a href="#">留言</a></li>
       <li><a href="#">关于</a></li>
       <% if signed_in? %>
       <li><%= link_to '管理', user_path %></li>

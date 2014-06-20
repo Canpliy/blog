@@ -1,0 +1,14 @@
+<p class="article-info">
+  <em class="time"><%= format_time(resource.created_at) %></em>
+  <% if signed_in?  %>
+  <%= link_to '编辑', generate_edit_path_for(resource), class: 'edit' %>
+  <%= link_to '删除', generate_destroy_path_for(resource),
+                    class: 'destroy',
+                    method: :delete, 
+                    data: { confirm: "你确定要删除吗？" } %>
+  <% end %>
+  <em class="comment"><%= resource.comments.count %></em>
+  <% resource.tags.each do |tag| %>
+    <em class="tag"><%= tag.name %></em>
+  <% end %>
+</p>

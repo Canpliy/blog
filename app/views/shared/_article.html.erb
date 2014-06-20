@@ -1,10 +1,10 @@
 <div class="list-item article-item shadow">
-  <a href="<%= article_path(article) %>" class="article-container">
+  <a href="<%= article_path(article) %>" class="resource-container">
     <h2><%= article.title %></h2>
     <div class="article-content">
       <%= raw(article.content) %>
     </div>
   </a>
 
-  <%= render partial: 'shared/article_info', locals: { article: article } %>
+  <%= render partial: 'shared/resource_info', locals: { resource: article } %>
 </div>

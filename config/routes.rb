@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  resources :film_reviews
+
   resources :microposts
 
   resources :sessions, only: [:new, :create, :destroy]

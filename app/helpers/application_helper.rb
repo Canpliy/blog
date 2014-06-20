@@ -16,4 +16,12 @@ module ApplicationHelper
       title + " | " + default_title
     end
   end
+
+  def generate_edit_path_for(resource)
+    "/#{resource.class.name.tableize}/#{resource.id}/edit"
+  end
+
+  def generate_destroy_path_for(resource)
+    "/#{resource.class.name.tableize}/#{resource.id}"
+  end
 end

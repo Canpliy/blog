@@ -1,0 +1,17 @@
+<div class="list-item film-review-item shadow">
+  <a href="<%= film_review_path(film_review) %>" class="resource-container">
+    <h2><%= film_review.title %></h2>
+    <ul class="movie-content">
+      <li><%= image_tag film_review.image_url, class: 'movie-image' %></li>
+      <li><span class="label">电影:</span><span><%= film_review.name %></span></li>
+      <li><span class="label">评分:</span><span class="movie-level bigstar<%= film_review.level %>"></span></li>
+      <li><span class="label">标签:</span><span><%= film_review.tags_to_s("/") %></span></li>
+      <li><span class="label">日期:</span><span><%= format_time(film_review.release_time) %></span></li>
+      <li class="review-content">
+        <%= raw(film_review.content) %>
+      </li>
+    </ul>
+  </a>
+
+  <%= render partial: 'shared/resource_info', locals: { resource: film_review } %>
+</div>

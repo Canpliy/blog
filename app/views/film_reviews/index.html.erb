@@ -1,0 +1,7 @@
+<%= provide(:page_title, '影评') %>
+
+<div class="create-btn">
+  <%= link_to '新建影评', new_film_review_path, class: 'btn btn-success' %>
+</div>
+
+<%= render partial: 'shared/film_review', collection: @reviews %>

@@ -174,14 +174,35 @@ header{
   }
 }
 
+.create-btn{
+  margin-top: 20px;
+  text-align: right;
+}
+
 .list-item{
   margin-top: 20px;
   background: white;
 }
 
+
 .article-item{
 
-  .article-container{
+  .article-content{
+    max-height: 96px;
+    margin-bottom: 5px;
+  }
+
+  p{
+    line-height: 24px;
+  }
+}
+
+.film-review-item, .article-item{
+  .resource-container, .article-info{
+    padding: 0 10px;
+  }
+
+  .resource-container{
     display: block;
     color: inherit;
 
@@ -190,28 +211,73 @@ header{
     }
   }
 
-  .article-container, .article-info{
-    padding: 0 10px;
-  }
-
-  .article-content{
-    max-height: 96px;
-    margin-bottom: 5px;
-  }
-
   h2{
     line-height: 50px;
     font-size: 30px;
     font-weight: normal;
   }
+}
 
-  p{
-    line-height: 24px;
+.movie-content{
+  list-style: none;
+  font-size: 13px;
+  line-height: 20px;
+  color: #666;
+
+  li{
+    vertical-align: middle;
   }
+
+  .movie-level{
+    display: inline-block;
+    width: 75px;
+    height: 14px;
+    background: url(bigstars.gif) no-repeat;
+  }
+
+  .bigstar4{
+    background-position: 0 -28px;
+  }
+
+  .bigstar3{
+    background-position: 0 -56px;
+  }
+
+  .bigstar2{
+    background-position: 0 -84px;
+  }
+
+  .bigstar1{
+    background-position: 0 -112px;
+  }
+
+  .label{
+    margin-right: 1em;
+    margin-bottom: 4px;
+  }
+
+  .movie-image{
+    float: left;
+    width: 100px;
+    height: 140px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .review-content{
+    max-height: 44px;
+    overflow: hidden;
+  }
+
+}
+
+.film-review-item{
+
 }
 
 .article-info{
   border-top: 2px solid $gray-border-color;
+  clear: both;
 
   em, a{
     display: block;
@@ -277,6 +343,10 @@ header{
 
 .edit-content{
   padding: 20px 20px 0;
+}
+
+.normal-content{
+  padding: 10px 10px 0;
 }
 
 // 表单样式
@@ -362,6 +432,7 @@ header{
 
 #article-content{
   font-size: 16px;
+  clear: both;
 
   p{
     line-height: 24px;

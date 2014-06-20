@@ -1,0 +1,25 @@
+<%= provide(:page_title, @review.title) %>
+
+<div class="edit-content list-item shadow">
+  <h2 class="main-title"><%= @review.title %></h2>
+  <div id="article-content">
+    <%= raw(@review.content) %>
+  </div>
+  <%= render partial: 'shared/resource_info',
+             locals: { resource: @review } %>
+</div>
+
+<div class="normal-content list-item shadow">
+  <ul class="movie-content">
+    <li><%= image_tag @review.image_url, class: 'movie-image' %></li>
+    <li><span class="label">电影:</span><span><%= @review.name %></span></li>
+    <li><span class="label">评分:</span><span class="movie-level bigstar<%= @review.level %>"></span></li>
+    <li><span class="label">标签:</span><span><%= @review.tags_to_s("/") %></span></li>
+    <li><span class="label">日期:</span><span><%= format_time(@review.release_time) %></span></li>
+    <li class="review-content">
+      <%= raw(@review.content) %>
+    </li>
+  </ul>
+</div>
+
+<%= render partial: 'shared/comment', locals: { resource: @review } %>

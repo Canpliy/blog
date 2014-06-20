@@ -5,27 +5,8 @@
   <div id="article-content">
     <%= raw(@article.content) %>
   </div>
-  <%= render partial: 'shared/article_info',
-             locals: { article: @article } %>
+  <%= render partial: 'shared/resource_info',
+             locals: { resource: @article } %>
 </div>
 
-<div id="comment-content" class="shadow list-item">
-  <h2 class="comment-title">评论</h2>
-  <% @article.comments.each_with_index do |comment, index| %>
-    <div class="comment-box">
-      <div class="comment-info">
-        <em class="comment-name"><%= comment.name %></em>
-        <em class="comment-time">
-          [<%= distance_of_time_in_words(Time.now, comment.created_at) %>]
-        </em>
-        <em class="comment-index"><%= index + 1 %>楼</em>
-      </div>
-      <p class="comment-text">
-        <%= comment.content %>
-      </p>
-    </div>
-  <% end %>
-
-  <%= render partial: 'shared/comment_form',
-             locals: { comment: @article.comments.build  } %>
-</div>
+<%= render partial: 'shared/comment', locals: { resource: @article } %>

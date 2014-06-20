@@ -1,0 +1,7 @@
+<%= provide(:title, '新建影评') %>
+
+<div class="edit-content list-item shadow">
+  <h2 class="main-title">新建影评</h2>
+  <%= render partial: 'form',
+             locals: { review: @review } %>
+</div>

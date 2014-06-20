@@ -1,0 +1,37 @@
+<%= form_for(@review, html: { class: 'form article-form' }) do |f| %>
+  <div>
+    <%= f.label :name, '名称' %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :image_url, '海报' %>
+    <%= f.url_field :image_url %>
+  </div>
+  <div>
+    <%= f.label :level, '等级' %>
+    <%= f.range_field :level, in: 1..5 %>
+  </div>
+  <div>
+    <%= f.label :tags, '标签' %>
+    <%= f.text_field :tags, value: @review.tags_to_s %>
+  </div>
+  <div>
+    <%= f.label :release_time, '时间' %>
+    <%= f.date_field :release_time %>
+  </div>
+  <div>
+    <%= f.label :title, '标题' %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= f.label :content, '内容' %>
+    <%= f.text_area :content, id: "article-content" %>
+    <script type="text/javascript">
+      $("#article-content").qeditor({});
+    </script>
+  </div>
+  <div>
+    <%= f.submit '确定', class: 'btn btn-success' %>
+    <%= link_to '返回', film_reviews_path, class: 'btn' %>
+  </div>
+<% end %>
