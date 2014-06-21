@@ -1,0 +1,35 @@
+header .show-image-container{
+  height: 120px;
+}
+
+header .home{
+  height: 410px;
+  background: url(../<%= skin.home_image %>);
+}
+
+header .article{
+  background: url(../<%= skin.article_image %>);
+}
+
+header .film_review{
+  background: url(../<%= skin.film_review_image %>);
+}
+
+header .music{
+  background: url(../<%= skin.music_image %>);
+}
+
+header .setting{
+  background: url(../<%= skin.setting_image %>);
+}
+
+header .skin{
+  background: url(../<%= skin.skin_image %>);
+}
+
+.main-container{
+  background-color: <%= skin.background_color %>;
+  <% if skin.background_image %>
+    background-image: url(../<%= skin.background_image %>);
+  <% end %>
+}

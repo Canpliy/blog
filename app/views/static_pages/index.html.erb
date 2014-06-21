@@ -1,0 +1,9 @@
+<% @resources.each do  |r| %>
+  <% if r.is_a? Article %>
+    <%= render partial: 'shared/article', locals: { article: r } %>
+  <% elsif r.is_a? FilmReview %>
+    <%= render partial: 'shared/film_review', locals: { film_review: r} %>
+  <% else %>
+    <%= render partial: 'shared/music', locals: { music: r} %>
+  <% end %>
+<% end %>

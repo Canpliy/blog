@@ -1,0 +1,9 @@
+<%= provide(:title, '皮肤管理') %>
+
+<div class="create-btn">
+  <%= link_to '新建皮肤', new_skin_path, class: 'btn btn-success' %>
+</div>
+
+<div class="edit-content list-item shadow">
+  <%= render @skins %>
+</div>

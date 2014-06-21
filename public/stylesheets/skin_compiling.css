@@ -1,0 +1,32 @@
+header .show-image-container{
+  height: 120px;
+}
+
+header .home{
+  height: 410px;
+  background: url(../home_image.jpg);
+}
+
+header .article{
+  background: url(../article_image.jpg);
+}
+
+header .film_review{
+  background: url(../film_review_image.jpg);
+}
+
+header .music{
+  background: url(../music_image.jpg);
+}
+
+header .setting{
+  background: url(../setting_image.jpg);
+}
+
+header .skin{
+  background: url(../skin_image.jpg);
+}
+
+.main-container{
+  background-color: #ededed;
+}

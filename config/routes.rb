@@ -2,15 +2,19 @@ Rails.application.routes.draw do
 
   root 'static_pages#index'
 
+  resources :sessions, only: [:new, :create, :destroy]
+
+  resources :comments, only: [:create, :destroy]
+
   resources :articles
 
   resources :film_reviews
 
   resources :microposts
 
-  resources :sessions, only: [:new, :create, :destroy]
+  resources :skins
 
-  resources :comments, only: [:create, :destroy]
+  resources :musics
 
   resource :user do
     member do

@@ -4,15 +4,14 @@
 <body class="main-container">
 
   <header class="shadow">
-    <%= image_tag "#{show_picture_name}.jpg",
-                  class: "#{show_picture_name}" %>
+    <div class="show-image-container <%= background_style %>"></div>
     <ul id="nav">
       <li><%= link_to '首页', root_path %></li>
       <li><%= link_to '日志', articles_path %></li>
       <li><%= link_to '影评', film_reviews_path %></li>
-      <li><a href="#">音乐</a></li>
-      <li><a href="#">关于</a></li>
+      <li><%= link_to '音乐', musics_path %></li>
       <% if signed_in? %>
+      <li><%= link_to '皮肤', skins_path %></li>
       <li><%= link_to '管理', user_path %></li>
       <li><%= link_to '注销', signout_path %></li>
       <%end %>

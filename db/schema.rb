@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140619074607) do
+ActiveRecord::Schema.define(version: 20140621122419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,28 @@ ActiveRecord::Schema.define(version: 20140619074607) do
 
   create_table "microposts", force: true do |t|
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "musics", force: true do |t|
+    t.string   "name"
+    t.string   "url"
+    t.string   "singer"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skins", force: true do |t|
+    t.string   "name"
+    t.string   "background_color"
+    t.string   "background_image"
+    t.string   "home_image"
+    t.string   "article_image"
+    t.string   "film_review_image"
+    t.string   "music_image"
+    t.string   "setting_image"
+    t.string   "skin_image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

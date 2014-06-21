@@ -1,0 +1,8 @@
+<div class="list-item article-item shadow">
+  <div class="music-container">
+    <em><%= music.name %></em><em class="separator">-</em><em><%= music.singer %></em>
+    <%= audio_tag music.url, controls: true %>
+  </div>
+
+  <%= render partial: 'shared/resource_info', locals: { resource: music } %>
+</div>

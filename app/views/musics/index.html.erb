@@ -1,0 +1,7 @@
+<%= provide(:page_title, '音乐') %>
+
+<div class="create-btn">
+  <%= link_to '新建音乐', new_music_path, class: 'btn btn-success' %>
+</div>
+
+<%= render partial: 'shared/music', collection: @musics %>

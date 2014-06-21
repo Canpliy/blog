@@ -1,0 +1,27 @@
+<%= form_for(@music, html: { class: 'form music-form' },  multipart: true) do |f| %>
+  <div>
+    <%= f.label :name, '名称' %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :tags, '标签' %>
+    <%= f.text_field :tags, value: @music.tags_to_s %>
+  </div>
+
+  <div>
+    <%= f.label :url, '音乐' %>
+    <%= button_tag '上传音乐', class: 'btn btn-success' %>
+    <%= f.file_field :url, class: "image-update" %>
+  </div>
+
+  <div>
+    <%= f.label :singer, '歌手' %>
+    <%= f.text_field :singer %>
+  </div>
+ 
+  <div>
+    <%= f.submit '确定', class: 'btn btn-success' %>
+    <%= link_to '返回', musics_path, class: 'btn' %>
+  </div>
+<% end %>

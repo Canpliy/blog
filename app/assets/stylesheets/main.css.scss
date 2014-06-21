@@ -25,7 +25,6 @@ body{
   font-family: "微软雅黑", sans-serif;
 }
 
-$background_color: #ededed;
 $content-with: 980px;
 $blue-font-color: #08c;
 $gray-border-color: #e3e3e3;
@@ -47,10 +46,6 @@ $gray-color: #9b9b9b;
 
 .shadow{
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
-}
-
-.main-container{
-  background-color: $background_color;
 }
 
 .alert{
@@ -89,11 +84,6 @@ header{
     display: block;
     height: 120px;
   }
-
-  .home_show_picture{
-    height: 410px;
-  }
-
 }
 
 #person-info{
@@ -377,6 +367,25 @@ header{
   }
 }
 
+.form{
+  .btns{
+    .btn{
+      margin-right: 10px;
+      float: right;
+    }
+  }
+
+  .field_with_errors{
+
+    input, .qeditor_preview{
+      border: 1px red solid;
+      &:focus{
+        box-shadow: none;
+      }
+    }
+  }
+}
+
 .article-form{
   .qeditor_border{
     margin-left: 43px;
@@ -403,20 +412,25 @@ header{
       margin-bottom: 10px;
     }
   }
+}
 
-  .btn{
-    margin-right: 10px;
-    float: right;
+.music-form, .skin-form{
+  &>div{
+    position: relative;
   }
+}
 
-  .field_with_errors{
+.skin-form{
 
-    input, .qeditor_preview{
-      border: 1px red solid;
-      &:focus{
-        box-shadow: none;
-      }
-    }
+  .image-update{
+    left: 71px;
+    cursor: pointer;
+  }
+}
+
+.music-form{
+  .image-update{
+    left: 43px;
   }
 }
 
@@ -562,7 +576,6 @@ header{
 input.image-update{
   position: absolute;
   left: 0;
-  right: 0;
   width: 82px;
   opacity: 0;
 }
@@ -592,4 +605,43 @@ input.image-update{
   .btn{
     margin-left: 60px;
   }
+}
+
+// 皮肤设置样式
+
+.skin-box{
+  width: 300px;
+  margin-left: 10px;
+  float: left;
+
+  img{
+    display: block;
+  }
+
+  .btns{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+  }
+}
+
+// 音乐卡片样式
+.music-container{
+  padding: 0 20px;
+
+  em{
+    font-style: normal;
+    line-height: 40px;
+  }
+
+  audio{
+    margin-top: 5px;
+    float: right;
+    width: 500px;
+  }
+
+  .separator{
+    margin: 0 10px;
+  }
+
 }

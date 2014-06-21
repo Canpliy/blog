@@ -48,13 +48,12 @@ $(document).on('page:change', function(){
     event.preventDefault();
   });
 
-  $('.image-update').change(function(event) {
+  $('#edit-image .image-update').change(function(event) {
     $(this).parent('form').submit();
   });
 
 
   $('#mytest').change(function(event) {
     alert($(this).val());
-
   });
 });

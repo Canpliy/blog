@@ -1,0 +1,7 @@
+<%= provide(:title, '新建皮肤') %>
+
+<div class="edit-content list-item shadow">
+  <h2 class="main-title">新建皮肤</h2>
+  <%= render partial: 'form',
+             locals: { skin: @skin } %>
+</div>

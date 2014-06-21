@@ -1,0 +1,49 @@
+<%= form_for(@skin, html: { class: 'form skin-form' }, multipart: true) do |f| %>
+  <div>
+    <%= f.label :name, '皮肤名称' %>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :background_color, '背景颜色' %>
+    <%= f.color_field :background_color %>
+  </div>
+  <div>
+    <%= f.label :background_image, '背景图片' %>
+    <%= button_tag '上传图片', class: 'btn btn-success' %>
+    <%= f.file_field :background_image, class: "image-update" %>
+  </div>
+  <div>
+    <%= f.label :home_image, '首页图片' %>
+    <%= button_tag '上传图片', class: 'btn btn-success' %>
+    <%= f.file_field :home_image, class: "image-update" %>
+  </div>
+  <div>
+    <%= f.label :article_image, '日志图片' %>
+    <%= button_tag '上传图片', class: 'btn btn-success' %>
+    <%= f.file_field :article_image, class: "image-update" %>
+  </div>
+  <div>
+    <%= f.label :film_review_image, '影评图片' %>
+    <%= button_tag '上传图片', class: 'btn btn-success' %>
+    <%= f.file_field :film_review_image, class: "image-update" %>
+  </div>
+  <div>
+    <%= f.label :music_image, '音乐图片' %>
+    <%= button_tag '上传图片', class: 'btn btn-success' %>
+    <%= f.file_field :music_image, class: "image-update" %>
+  </div>
+  <div>
+    <%= f.label :setting_image, '设置图片' %>
+    <%= button_tag '上传图片', class: 'btn btn-success' %>
+    <%= f.file_field :setting_image, class: "image-update" %>
+  </div>
+  <div>
+    <%= f.label :skin_image, '皮肤图片' %>
+    <%= button_tag '上传图片', class: 'btn btn-success' %>
+    <%= f.file_field :skin_image, class: "image-update" %>
+  </div>
+  <div class="btns">
+    <%= f.submit '确定', class: 'btn btn-success' %>
+    <%= link_to '返回', skins_path, class: 'btn' %>
+  </div>
+<% end %>
